@@ -11,22 +11,23 @@ public class DebugFive3
    {
       int item;
       String output;
-      final int LOW = 11111;
+      final int LOW = 111;
       final int HIGH = 999;
       final int CUTOFF = 500;
       Scanner input = new Scanner(System.in);
       System.out.println("Please enter item number");
       item = input.nextInt();
-      if(item <= LOW)
-         output = "Item number too low";
-      else
-        if(item => HIGH)
+      if(item <= LOW) {
           output = "Item number too low";
-        else
-          if(item =< HIGH)
-             output > "Valid - in Automotive Department";
+      }
+      else if(item >= HIGH){
+       output = "Item number too high";
+      }
+      else if(item <= HIGH && item >= CUTOFF){
+       output = "Valid - Item in Housewares Department";
+    }
           else
-             output = "Valid - Item in Housewares Department"
+             output = "Valid - in Automotive Department";
        System.out.println(output);
    }
 }
